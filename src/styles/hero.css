@@ -1,0 +1,111 @@
+.section--hero {
+  position: relative;
+  background-image: "";
+  background-size: 'cover';
+  background-position: 'center';
+  height: '400px';
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
+  flex-direction: 'column';
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  body .section--hero {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.hero__background {
+  background: var(--color-gradient);
+  height: 40vw;
+}
+
+@media screen and (min-width: 750px) {
+  .hero__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.hero__content {
+  position: relative;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .hero__content {
+    --color-background: var(--color-base-background-2);
+    --color-foreground: var(--color-base-background);
+  }
+}
+
+.hero__details {
+  background: rgb(var(--color-background));
+  padding-top: var(--spacer-large);
+  padding-bottom: var(--spacer-large);
+}
+
+.hero-details__emoji {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: -2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .hero__content {
+    --color-background: var(--color-base-background);
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacer-large);
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+  }
+
+  .hero__details {
+    padding-top: var(--spacer-medium);
+    padding-left: var(--spacer-large);
+    padding-right: var(--spacer-large);
+    border-radius: 2rem;
+    box-shadow: 0 0.4rem 2.4rem rgba(var(--color-foreground), 0.2);
+  }
+}
+
+.hero__image {
+  outline: solid 0.4rem rgb(var(--color-background));
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  display: inline-block;
+  height: auto;
+  width: 20rem;
+  border-radius: 50%;
+  height: auto;
+}
+
+@media screen and (min-width: 750px) {
+  .hero__image {
+    width: 30vw;
+    outline: none;
+    position: static;
+    transform: none;
+    box-shadow: 0 0.4rem 2.4rem rgba(var(--color-foreground), 0.2);
+  }
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacer-small);
+}
+

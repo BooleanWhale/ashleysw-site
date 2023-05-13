@@ -1,0 +1,179 @@
+/*=== Variables ===*/
+
+/* Colors */
+:root {
+  --color-base-text: 0,0,0;
+  --color-background: 255,255,255;
+  --color-primary: 0, 0, 0;
+  --color-secondary: 248, 241, 235;
+  --color-image-background: 248, 248, 248;
+  --opacity-feint: 0.3;
+  --color-shadow: 0,0,0;
+  --box-shadow: 0 0.4rem 1.2rem rgba(var(--color-foreground), 0.1);
+  --box-shadow-heavy: 0 0.4rem 2.4rem rgba(var(--color-foreground), 0.2);
+}
+
+/* Text elements */
+:root {
+  --font-body-family: sans-serif;
+  --font-body-size: 1.4rem;
+  --font-body-scale: var(--body-font-size);
+  --font-body-line-hight: 1.5;
+  --font-body-line-hight-tight: 1.2;
+  --caption-font-size: 1.2rem;
+  --caption-font-size-mobile: 1.2rem;
+  --body-font-family: '';
+  --body-letter-spacing: 0.04rem;
+  --font-body-style: normal;
+  --font-weight-normal: 400;
+  --font-weight-strong: 500;
+  --font-weight-heavy: 700;
+  --h0-font-size: 6rem;
+  --h0-font-size-mobile: 4.8rem;
+  --h0-font-family: '';
+  --h1-font-size: 3.6rem;
+  --h1-font-size-mobile: 2.4rem;
+  --h1-font-family: '';
+  --h2-font-size: 3rem;
+  --h2-font-size-mobile: 2.4rem;
+  --h2-font-family: '';
+  --h3-font-size: 2.4rem;
+  --h3-font-size-mobile: 2rem;
+  --h3-font-family: '';
+  --h4-font-size: 1.8rem;
+  --h4-font-size-mobile: 1.7rem;
+  --h4-font-family: '';
+  --h5-font-size: 1.4rem;
+  --h5-font-size-mobile: 1.4rem;
+  --h5-font-family: '';
+  --letter-spacing-normal: 0.05em;
+  --letter-spacing-small: 0.07em;
+  --letter-spacing-medium: 0.15em;
+  --letter-spacing-large: 0.2em;
+  --underline-offet: 0.3rem
+}
+
+/* Buttons */
+:root {
+  --color-button-primary: black;
+  --text-color-button-primary: white;
+  --color-button-primary-hover: white;
+  --text-color-button-primary-hover: black;
+  --color-button-ghost: white;
+  --text-color-button-ghost: black;
+  --color-button-ghost-hover: black;
+  --text-color-button-ghost-hover: white;
+  --button-font-size: 1.4rem;
+  --button-padding: 1rem;
+  --button-small-padding: 0.3rem;
+  --button-small-height: 2.5rem;
+}
+
+/* Form element */
+:root {
+  --inputs-shadow-horizontal-offset: 0;
+  --inputs-shadow-vertical-offset: 1px;
+  --inputs-border-width: 1px;
+  --inputs-margin: 1px 0 0;
+  --inputs-margin-bottom: 2rem;
+  --inputs-padding: 0;
+  --accent-color-checkbox: black;
+}
+
+/* UI elements */
+:root {
+  --badge-border-radius: 0;
+  --border: solid 0.1rem rgba(var(--color-foreground),0.2)
+}
+
+/* Margins / Paddings / spacing */
+:root {
+  --spacer-small-x2: 1.2rem;
+  --spacer-small: 1.6rem;
+  --spacer-small-medium: 2.4rem;
+  --spacer-medium: 3.2rem;
+  --spacer-medium-large: 4.8rem;
+  --spacer-large: 6.4rem;
+  --grid-space-small: 1.5rem;
+}
+
+/* Durations / transforms */
+:root {
+  --duration-short: 200ms;
+  --duration-medium: 500ms;
+  --duration-long: 700ms;
+  --transition-short: ease var(--duration-short);
+  --transition-medium: ease var(--duration-medium);
+  --transition-long: ease var(--duration-long);
+  --page-width-padding-mobile: 1.2rem;
+  --page-width-padding-desktop: 3rem;
+  --page-width-padding: var(--page-width-padding-mobile);
+}
+
+/* Page width */
+:root {
+  --page-width: 120rem;
+  --page-width-padding-mobile: 1.2rem;
+  --page-width-padding-desktop: 3rem;
+  --page-width-padding: var(--page-width-padding-mobile);
+}
+
+@media screen and (min-width: 750px) {
+  :root {
+    --page-width-padding: var(--page-width-padding-desktop);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  :root {
+    --page-width-padding: var(--page-width-padding-desktop);
+  }
+}
+
+/*=== Classes ===*/
+
+/* General */
+.page-width {
+  max-width: var(--page-width);
+  padding-left: var(--page-width-padding);
+  padding-right: var(--page-width-padding);
+}
+
+/* Buttons */
+button,
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: 0 3rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--font-body-size);
+  text-decoration: none;
+  -webkit-appearance: none;
+  appearance: none;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+}
+
+.button--primary {
+  --color-foreground: var(--color-background);
+  --color-background: var(--color-primary);
+}
+
+.button--secondary {
+  --color-foreground: var(--color-background);
+  background: none;
+}
+
+.button--secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: solid 0.1rem solid rgb(var(--color-background));
+}

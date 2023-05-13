@@ -1,21 +1,15 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, NavLink} from "react-router-dom";
-import Home from './pages/Home.js'
+import Home from './pages/Home'
 import Blog from './pages/Blog.js'
+import Header from './sections/Header'
 import './App.css';
+import './styles/base.css';
 
 function App() {
-  const getClassName = ({ isActive}:{ isActive: boolean }):string => {
-    return isActive ? "active" : "";
-  }
-
   return (
     <Router>
-      <nav>
-        <NavLink to="/" className={getClassName}>Home</NavLink>
-        <NavLink to="/blog" className={getClassName}>About</NavLink>
-      </nav>
-      
+      <Header/>
       <main>
         <Routes>
           <Route path="/" element={<Home />}></Route>
