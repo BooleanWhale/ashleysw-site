@@ -389,14 +389,52 @@ body {
   -webkit-animation: scale-in var(--duration-short) var(--ease-out-sine) both;
   animation: scale-in var(--duration-short) var(--ease-out-cubic) both;
 }
-
 @-webkit-keyframes scale-in {
-  0% { scale: 0; }
-  100% { scale: 1; }
+  0% { scale: 0; opacity: 0; }
+  100% { scale: 1; opacity: 1; }
 }
 @keyframes scale-in {
-  0% { scale: 0; }
-  100% { scale: 1; }
+  0% { scale: 0; opacity: 0; }
+  100% { scale: 1; opacity: 1; }
+}
+
+.animate-scale-out {
+  -webkit-animation: scale-out var(--duration-short) ease-in-out both;
+  animation: scale-out var(--duration-short) ease-in-out both;
+}
+@-webkit-keyframes scale-out {
+  0% { scale: 1; opacity: 1; }
+  100% { scale: 0; opacity: 0; }
+}
+@keyframes scale-out {
+  0% { scale: 1; opacity: 1; }
+  100% { scale: 0; opacity: 0; }
+}
+
+.animate-fade-in {
+  -webkit-animation: fade-in var(--duration-short) ease both;
+  animation: fade-in var(--duration-short) ease both;
+}
+@-webkit-keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-out {
+  -webkit-animation: fade-out var(--duration-short) ease both;
+  animation: fade-out var(--duration-short) ease both;
+}
+@-webkit-keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /*=== Classes ===*/
@@ -499,6 +537,7 @@ button,
   position: fixed;
   z-index: 1;
   top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   display: flex;
@@ -509,7 +548,8 @@ button,
 
 .modal-content {
   background: rgb(var(--color-background));
-  padding: 3rem;
+  padding: var(--size-5);
+  border-radius: var(--radius-sm);
 }
 
 /* Layouts */

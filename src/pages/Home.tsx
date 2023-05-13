@@ -15,7 +15,7 @@ function Home({}: Props) {
           title="Welcome to My Website"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
@@ -28,7 +28,7 @@ function Home({}: Props) {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
         <Codepens/>
       </div>
     </>
