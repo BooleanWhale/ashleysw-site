@@ -31,25 +31,3 @@ const CodePens: React.FC = () => {
 };
 
 export default CodePens;
-
-
-// import React, { useState } from 'react';
-
-// const ClassNameComponent: React.FC = () => {
-//   const [hasTestClassName, setHasTestClassName] = useState(false);
-
-//   const handleButtonClick = () => {
-//     setHasTestClassName(true);
-//   };
-
-//   const componentClassName = hasTestClassName ? 'test' : '';
-
-//   return (
-//     <div className={componentClassName}>
-//       <button onClick={handleButtonClick}>Add Class Name</button>
-//       {/* Rest of the component's content */}
-//     </div>
-//   );
-// };
-
-// export default ClassNameComponent;
