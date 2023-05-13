@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, children }) => {
 
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
-      onClose();
+      setIsClosing(true);
     }
   };
 

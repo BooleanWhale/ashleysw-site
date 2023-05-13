@@ -20,10 +20,14 @@ const Codepen: React.FC<CodepenProps> = ({ src, title, img}) => {
 
   return (
     <>
-      <button className="card" onClick={handleButtonClick}>
-        <img src={img} height="100" width="100" alt={title}/>
-        <span>Open Modal</span>
-      </button>
+      <div className="card" onClick={handleButtonClick}>
+        <div className="card__image image">
+          <img src={img} height="100" width="100" alt={title}/>
+        </div>
+        <div className="card__card-content">
+          <span className='card-content__title'>{title}</span>
+        </div>
+      </div>
       {isModalOpen && (
         <Modal onClose={closeModal}>
           <iframe style={{width: '70vw', maxWidth: '1000px', minHeight: '70vh'}} scrolling="no" title={title} 
