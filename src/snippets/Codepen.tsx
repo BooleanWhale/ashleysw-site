@@ -30,6 +30,13 @@ const Codepen: React.FC<CodepenProps> = ({ src, title, img}) => {
       </div>
       {isModalOpen && (
         <Modal onClose={closeModal}>
+          <img
+            className="icon icon-loading animate-rotate-infinate"
+            src="/icons/icon-loading.svg"
+            alt="loading"
+            height="100"
+            width="100"
+          />
           <iframe style={{width: '70vw', maxWidth: '1000px', minHeight: '70vh'}} scrolling="no" title={title} 
             src={"https://codepen.io/ash_s_west/embed/"+src+"?height=265&theme-id=dark&default-tab=css,result"} 
             frameBorder="no" loading="lazy" allowFullScreen={true}>

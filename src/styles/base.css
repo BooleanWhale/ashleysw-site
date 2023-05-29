@@ -437,6 +437,20 @@ body {
   100% { opacity: 0; }
 }
 
+.animate-rotate-infinate {
+  -webkit-animation: rotate-infinate var(--duration-medium) linear infinite both;
+  animation: rotate-infinate var(--duration-medium) linear infinite both;
+}
+@-webkit-keyframes rotate-infinate {
+  0% { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes rotate-infinate {
+  0% { -webkit-transform: rotate(0); transform: rotate(0);
+  }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
 /*=== Classes ===*/
 
 /* General */
@@ -546,6 +560,17 @@ button,
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/* Icons */
+
+.icon-loading {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  scale: 0.5;
 }
 
 /* Modals */
