@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "title": "Blog Post 1",
+    "date": "2023-05-01",
+    "content": "article1.md"
+  },
+  {
+    "id": "2",
+    "title": "Blog Post 2",
+    "date": "2023-05-15",
+    "content": "article2.md"
+  }
+]
