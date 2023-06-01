@@ -1,22 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-interface BlogPost {
-  slug: string;
-  title: string;
-}
+import blogData from '../articles/blogData.json';
 
 const Blog: React.FC = () => {
-  const blogPosts: BlogPost[] = require('../articles/blogData.json');
-
   return (
     <div>
-      <h1>Blog</h1>
-      {blogPosts.map((post) => (
-        <div key={post.slug}>
-          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-        </div>
-      ))}
+      <h1>Blog List</h1>
+      <ul>
+        {blogData.map((blog) => (
+          <li key={blog.id}>
+            <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
